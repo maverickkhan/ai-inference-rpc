@@ -12,51 +12,50 @@ This platform is a distributed, peer-to-peer AI inference system with microservi
 
 1. **Gateway Worker**
 
-   * API gateway
-   * Authentication, rate limiting, request routing
-   * Exposes external APIs
+   - API gateway
+   - Authentication, rate limiting, request routing
+   - Exposes external APIs
 
 2. **Auth Worker**
 
-   * User registration/authentication
-   * API key management
-   * Credential storage/validation
+   - User registration/authentication
+   - API key management
+   - Credential storage/validation
 
 3. **Inference Worker**
 
-   * AI model inference
-   * Connects to model backends (OpenAI, Ollama)
-   * Scalable for load balancing
+   - AI model inference
+   - Connects to model backends (OpenAI, Ollama)
+   - Scalable for load balancing
 
 4. **Web Worker**
 
-   * Hosts web dashboard
-   * User management UI
-   * Dashboard/statistics
+   - Hosts web dashboard
+   - User management UI
+   - Dashboard/statistics
 
 5. **Base Worker**
 
-   * Shared logic (storage, metrics, RPC)
-   * Lifecycle utilities
+   - Shared logic (storage, metrics, RPC)
+   - Lifecycle utilities
 
 ### Data Flow and Storage
 
-* Hyperbee for distributed storage (via Hypercore)
-* Auth data, logs, and usage metrics stored per worker
-* Configuration via JSON files
-* Web UI uses EJS templates
+- Auth data, logs, and usage metrics stored per worker
+- Configuration via JSON files
+- Web UI uses EJS templates
 
 ### Communication/Protocols
 
-* P2P/RPC via Hyperswarm
-* Workers run with --wtype flag
-* Metrics via Prometheus (Gateway)
+- P2P/RPC via Hyperswarm
+- Workers run with --wtype flag
+- Metrics via Prometheus (Gateway)
 
 ### Deployment/Scaling
 
-* Independent worker scaling
-* Decentralized, fault-tolerant
-* Inference workers scale with demand
+- Independent worker scaling
+- Decentralized, fault-tolerant
+- Inference workers scale with demand
 
 ---
 
@@ -103,7 +102,7 @@ This platform is a distributed, peer-to-peer AI inference system with microservi
 
 ## Summary
 
-* Registration, key management via Auth Worker
-* Inference via Gateway/Inference Workers
-* Dashboard on Web Worker
-* Distributed, scalable, fault-tolerant
+- Registration, key management via Auth Worker
+- Inference via Gateway/Inference Workers
+- Dashboard on Web Worker
+- Distributed, scalable, fault-tolerant
