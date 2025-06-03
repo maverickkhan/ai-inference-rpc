@@ -1,0 +1,16 @@
+*env
+node_modules
+*.swp
+*.swo
+.DS_Store
+npm-debug.log
+config/discovery.json
+!config/facs/*.json.example
+config/facs/*.json
+status
+logs
+sec
+store
+status
+package-lock.json
+coverage

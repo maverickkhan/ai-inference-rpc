@@ -1,0 +1,35 @@
+{
+  "debug": 1,
+  "env": "development",
+  "services": {
+    "discovery": {
+      "namespace": "ai-inference-platform"
+    },
+    "inference": {
+      "backend": "openai",
+      "defaultModel": "gpt-3.5-turbo",
+      "models": [
+        "gpt-3.5-turbo",
+        "gpt-3.5-turbo-16k", 
+        "gpt-4",
+        "gpt-4-turbo-preview",
+        "gpt-4o",
+        "gpt-4o-mini"
+      ]
+    },
+    "rateLimit": {
+      "requests": 100,
+      "windowMs": 60000
+    }
+  },
+  "metrics": {
+    "enabled": true,
+    "port": 9090,
+    "endpoints": {
+      "gateway": "http://localhost:9090/metrics",
+      "auth": "http://localhost:9091/metrics", 
+      "inference": "http://localhost:9092/metrics",
+      "web": "http://localhost:9093/metrics"
+    }
+  }
+}
